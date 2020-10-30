@@ -9,9 +9,34 @@ public class TestDriver {
         //   testShop();
         //  testCar();
 
-        testInvoice();
+      //  testInvoice();
         ///  testInvoiceItem();
-        testStreet();
+      //  testStreet();
+
+        testShoppingCart();
+
+    }
+
+    private static void testShoppingCart() {
+
+        ShoppingCart cart = new ShoppingCart();
+
+        Product p = new Product("Apples");
+        p.setPrice(10);
+        p.setQuantity(5);
+        cart.addProduct(p);
+
+        Product p2 = new Product("Oranges");
+        p2.setPrice(6);
+        p2.setQuantity(7);
+        cart.addProduct(p2);
+
+        String message = String.format("Total value is %f", cart.getTotalValue());
+        System.out.println(message);
+
+        System.out.println(cart.showReceiptItems());
+
+
 
     }
 
