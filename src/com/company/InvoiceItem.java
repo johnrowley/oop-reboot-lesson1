@@ -17,6 +17,19 @@ public class InvoiceItem {
         quantity = _quantity;
     }
 
+    public int getPrice() {
+        return price;
+    }
+
+    public int getTotalValue() {
+        return price * quantity;
+    }
+
+    public int getQuantity() {
+
+        return quantity;
+    }
+
 
     public String getName() {
         return name;
@@ -25,7 +38,8 @@ public class InvoiceItem {
     @Override
     public String toString() {
 
-        return String.format("Invoice Item Details: " + name + "| Price: " + price + "| Quantity: " + quantity);
+        // return String.format("Invoice Item Details: " + name + "| Price: " + price + "| Quantity: " + quantity );
+        return String.format("Invoice Item Details: %s | Price: % d | Quantity: %d | Value: %d", name, price,  quantity, getTotalValue() );
 
     }
 

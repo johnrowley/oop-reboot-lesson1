@@ -13,5 +13,10 @@ public class Shop {
         return name;
     }
 
+    @Override
+    public String toString() {
+
+        return String.format("Shop " + name);
+    }
 
 }
