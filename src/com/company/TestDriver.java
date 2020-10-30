@@ -20,7 +20,10 @@ public class TestDriver {
         Street street = new Street("Dame Street");
 
         Car car1 = new Car("Volvo");
+        car1.setPassengerCount(4);
+
         Car car2 = new Car("BMW");
+        car2.setPassengerCount(2);
 
         street.addCar(car1);
         street.addCar(car2);
@@ -38,6 +41,9 @@ public class TestDriver {
             System.out.println(message);
         }
 
+        String message = String.format("Total passengers in cars  on the street is %d", street.getTotalPassengers());
+        System.out.println(message);
+
 
     }
 
@@ -53,6 +59,7 @@ public class TestDriver {
         invoice.addInvoiceItem(item2);
         invoice.addInvoiceItem(item3);
         System.out.println(invoice.toString());
+
 
         ArrayList<InvoiceItem> itemsOnInvoice = invoice.getListOfInvoiceItems();
 

@@ -21,6 +21,20 @@ public class Street {
         listOfCars.add(carToAdd);
     }
 
+    public int getTotalPassengers() {
+
+        int totalPax = 0;
+
+        for(Car currentCar:listOfCars) {
+
+            totalPax += currentCar.getPassengerCount();
+        }
+
+
+        return totalPax;
+    }
+
+
 
     public ArrayList<Car> getCars() {
 

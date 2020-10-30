@@ -21,14 +21,16 @@ public class InvoiceItem {
         return price;
     }
 
-    public int getTotalValue() {
-        return price * quantity;
-    }
-
     public int getQuantity() {
 
         return quantity;
     }
+
+    public int getTotalValue() {
+        return price * quantity;
+    }
+
+
 
 
     public String getName() {
